@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="saveUser()">
+        <ion-list>
+          <ion-item>
+            <ion-label fixed>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="user.r_l_name" name="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label fixed>Mobile</ion-label>
+            <ion-input type="text" [(ngModel)]="user.r_l_mobile" name="mobile"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label fixed>Email</ion-label>
+            <ion-input type="text" [(ngModel)]="user.r_l_email" name="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.r_l_password" name="password"></ion-input>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label fixed>Confirm Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.r_l_c_password" name="confirmpasword"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <div padding>
+          <button ion-button color="primary" block>Sign up</button>
+        </div>
+    </form>
+</ion-content>
